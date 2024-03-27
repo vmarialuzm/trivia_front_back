@@ -1,6 +1,12 @@
-
+import { useNavigate } from 'react-router-dom'
 
 export const Vista1 = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate("/vista2");
+    }
+
     return (
         <>
             <div id="vista1">
@@ -17,11 +23,12 @@ export const Vista1 = () => {
                     
                     <br />
                     <div className="botonesTrivia">
-                    <button id="atractivos">Sitios turísticos</button>
-                    <button id="platos">Platos tipicos</button>
+                        <button onClick={handleClick} id="atractivos">Sitios turísticos</button>
+     
+                        <button id="platos">Platos tipicos</button>
+          
                     </div>
                     
-                
                 </form>
             </div>
         </>
