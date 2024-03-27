@@ -1,8 +1,8 @@
 
-export const MyForm = ({preguntasAtractivos, preguntasComidas}) => {
+export const MyForm = ({preguntas}) => {
 
     
-    const formulario = preguntasAtractivos.map(pregunta => 
+    const formulario = preguntas.map(pregunta => 
       <div key={pregunta.enunciado}>
         <p>{pregunta.enunciado}</p>
         <img src={pregunta.image.url} width={pregunta.image.width} height={pregunta.image.height}/><br/>

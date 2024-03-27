@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 export const Vista1 = () => {
     const navigate = useNavigate();
 
-    const handleClick = () => {
-        navigate("/vista2");
+    const handleClick = (params) => {
+        navigate(`/vista2?type=${params}`);
     }
 
     return (
@@ -23,9 +23,9 @@ export const Vista1 = () => {
                     
                     <br />
                     <div className="botonesTrivia">
-                        <button onClick={handleClick} id="atractivos">Sitios turísticos</button>
+                        <button onClick={() => handleClick('atractivos-turisticos')} id="atractivos">Atractivos turísticos</button>
      
-                        <button id="platos">Platos tipicos</button>
+                        <button onClick={() => handleClick('platos-tipicos')} id="platos">Platos tipicos</button>
           
                     </div>
                     
