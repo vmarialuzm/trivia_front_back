@@ -9,7 +9,7 @@ export const preguntasAtractivos = [
         height: 180,
       },
       opcionesRespuesta: {
-        opcion1: 'Piura',
+        opcion1: {name:'Piura', correct: true} ,
         opcion2: 'Lima',
         opcion3: 'Puno',
       }
